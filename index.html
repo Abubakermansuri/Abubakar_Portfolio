@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abubakar Mansuri | MERN Stack Developer | React Developer</title>
+    <meta name="description" content="MERN Stack Developer and MCA student from Ahmedabad, Gujarat, focused on building modern web applications, business solutions, and developing expertise in Data Analytics.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepblack: '#0a0a0a',
+                        charcoal: '#1c1c1c',
+                        offwhite: '#f8f9fa',
+                        warmbeige: '#f5f0e6',
+                        gold: '#d4af37',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-deepblack text-offwhite font-sans antialiased overflow-x-hidden">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-deepblack/90 backdrop-blur-md border-b border-charcoal transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-serif font-bold text-offwhite">AM<span class="text-gold">.</span></a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#about" class="text-gray-300 hover:text-gold transition-colors text-sm font-medium">About</a>
+                    <a href="#skills" class="text-gray-300 hover:text-gold transition-colors text-sm font-medium">Skills</a>
+                    <a href="#projects" class="text-gray-300 hover:text-gold transition-colors text-sm font-medium">Projects</a>
+                    <a href="#experience" class="text-gray-300 hover:text-gold transition-colors text-sm font-medium">Experience</a>
+                    <a href="#analytics" class="text-gray-300 hover:text-gold transition-colors text-sm font-medium">Analytics</a>
+                    <a href="#education" class="text-gray-300 hover:text-gold transition-colors text-sm font-medium">Education</a>
+                    <a href="#contact" class="px-5 py-2 rounded border border-gold text-gold hover:bg-gold hover:text-deepblack transition-all text-sm font-medium">Let's Talk</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-charcoal border-b border-gray-800">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-gold">About</a>
+                <a href="#skills" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-gold">Skills</a>
+                <a href="#projects" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-gold">Projects</a>
+                <a href="#experience" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-gold">Experience</a>
+                <a href="#analytics" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-gold">Analytics</a>
+                <a href="#education" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-gold">Education</a>
+                <a href="#contact" class="block px-3 py-2 text-base font-medium text-gold">Let's Talk</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-20">
+            <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-gold rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
+            <div class="absolute top-1/3 right-1/4 w-72 h-72 bg-blue-900 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
+            <div class="absolute -bottom-8 left-1/3 w-80 h-80 bg-gray-800 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="inline-block mb-4 px-3 py-1 rounded-full bg-charcoal border border-gray-800 text-gold text-sm tracking-widest uppercase fade-in-up">
+                Ahmedabad, Gujarat, India
+            </div>
+            <h1 class="text-5xl md:text-7xl font-serif font-bold text-offwhite mb-6 fade-in-up" style="animation-delay: 0.1s;">
+                Hi, I'm <span class="text-gold">Abubakar Mansuri</span>
+            </h1>
+            <h2 class="text-xl md:text-3xl text-gray-300 font-light mb-6 fade-in-up" style="animation-delay: 0.2s;">
+                MERN Stack Developer | React Developer | Aspiring Data Analyst
+            </h2>
+            <p class="max-w-2xl mx-auto text-lg text-gray-400 mb-10 fade-in-up leading-relaxed" style="animation-delay: 0.3s;">
+                I build modern, responsive web applications and business-focused digital solutions while continuously expanding my skills in data, analytics, and software development.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 fade-in-up" style="animation-delay: 0.4s;">
+                <a href="#projects" class="w-full sm:w-auto px-8 py-3 rounded bg-gold text-deepblack font-semibold hover:bg-yellow-500 transition-all shadow-lg hover:shadow-gold/20">
+                    View My Work
+                </a>
+                <a href="#" class="w-full sm:w-auto px-8 py-3 rounded border border-gray-600 text-offwhite hover:border-gold hover:text-gold transition-all flex items-center justify-center gap-2">
+                    <i class="fas fa-download"></i> Download Resume
+                </a>
+                <a href="#contact" class="w-full sm:w-auto px-8 py-3 rounded bg-charcoal text-offwhite hover:bg-gray-800 transition-all border border-transparent">
+                    Contact Me
+                </a>
+            </div>
+
+            <!-- Subtle tech floating elements -->
+            <div class="absolute top-1/4 left-10 md:left-20 text-gray-700 text-4xl opacity-50 floating">
+                <i class="fab fa-react"></i>
+            </div>
+            <div class="absolute bottom-1/4 right-10 md:right-20 text-gray-700 text-4xl opacity-50 floating" style="animation-delay: 1.5s;">
+                <i class="fab fa-node-js"></i>
+            </div>
+            <div class="absolute top-1/3 right-1/4 text-gray-700 text-2xl font-mono opacity-50 floating" style="animation-delay: 2.5s;">
+                { }
+            </div>
+            <div class="absolute bottom-1/3 left-1/4 text-gray-700 text-3xl opacity-50 floating" style="animation-delay: 0.5s;">
+                <i class="fas fa-chart-line"></i>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce text-gray-500">
+            <a href="#about"><i class="fas fa-chevron-down text-2xl hover:text-gold transition-colors"></i></a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-charcoal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                <div class="reveal">
+                    <h2 class="text-sm text-gold font-bold tracking-widest uppercase mb-2">About Me</h2>
+                    <h3 class="text-3xl md:text-4xl font-serif font-bold text-offwhite mb-6">A Journey from Code to Solutions</h3>
+                    
+                    <div class="space-y-4 text-gray-400 leading-relaxed">
+                        <p>
+                            I am a motivated technology professional focused on building modern web applications using the MERN stack. Currently pursuing my MCA after completing my BCA, my journey is driven by a passion for solving real-world problems through technology.
+                        </p>
+                        <p>
+                            My experience spans across Frontend and MERN Stack Development, crafting interfaces with React.js, and building robust backends with Node.js, Express, and MongoDB. With 1.5 years of professional experience as a MERN Stack Developer at GROOT Technologies, I have developed a strong foundation in building scalable solutions.
+                        </p>
+                        <p>
+                            Beyond development, I am actively expanding my knowledge in Data Analytics to better understand how data drives modern business applications.
+                        </p>
+                        
+                        <div class="mt-8 p-6 bg-deepblack border border-gray-800 rounded-lg relative">
+                            <i class="fas fa-quote-left absolute top-4 left-4 text-gray-800 text-2xl"></i>
+                            <p class="text-lg text-gray-300 italic relative z-10 pl-6">
+                                "I believe good software is not only about writing code — it is about understanding problems, creating useful solutions, and continuously improving the user experience."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative reveal">
+                    <div class="aspect-square rounded-xl bg-gradient-to-tr from-gray-800 to-charcoal border border-gray-700 p-8 flex flex-col justify-center relative overflow-hidden">
+                        <div class="absolute top-0 right-0 p-4 text-gold opacity-20 text-6xl"><i class="fas fa-code"></i></div>
+                        <h4 class="text-xl font-bold text-white mb-4">Areas of Exploration</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-deepblack text-gray-300 rounded text-sm border border-gray-800">React.js</span>
+                            <span class="px-3 py-1 bg-deepblack text-gray-300 rounded text-sm border border-gray-800">Node.js</span>
+                            <span class="px-3 py-1 bg-deepblack text-gray-300 rounded text-sm border border-gray-800">Express.js</span>
+                            <span class="px-3 py-1 bg-deepblack text-gray-300 rounded text-sm border border-gray-800">MongoDB</span>
+                            <span class="px-3 py-1 bg-deepblack text-gray-300 rounded text-sm border border-gray-800">REST APIs</span>
+                            <span class="px-3 py-1 bg-deepblack text-gray-300 rounded text-sm border border-gray-800">Full-Stack Development</span>
+                            <span class="px-3 py-1 bg-deepblack text-gray-300 rounded text-sm border border-gray-800">API Integration</span>
+                            <span class="px-3 py-1 bg-deepblack text-gray-300 rounded text-sm border border-gray-800">Data Analytics</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Timeline -->
+    <section id="education" class="py-24 bg-deepblack relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-sm text-gold font-bold tracking-widest uppercase mb-2">Academic Journey</h2>
+                <h3 class="text-3xl md:text-4xl font-serif font-bold text-offwhite">Education Timeline</h3>
+            </div>
+
+            <div class="relative border-l border-gray-800 ml-3 md:ml-6 space-y-12">
+                <!-- MCA -->
+                <div class="relative pl-8 md:pl-12 reveal">
+                    <div class="absolute w-6 h-6 bg-gold rounded-full -left-[12.5px] border-4 border-deepblack flex items-center justify-center"></div>
+                    <div class="bg-charcoal p-6 rounded-lg border border-gray-800 hover:border-gold/50 transition-colors">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
+                            <h4 class="text-xl font-bold text-white">Master of Computer Applications (MCA)</h4>
+                            <span class="text-gold font-mono text-sm mt-2 md:mt-0">2026 – Present</span>
+                        </div>
+                        <p class="text-lg text-gray-300 mb-2">GLS University, Ahmedabad</p>
+                        <p class="text-gray-400 text-sm">Advancing knowledge in enterprise software development, data analytics, and modern computing architectures.</p>
+                    </div>
+                </div>
+
+                <!-- Professional Dev -->
+                <div class="relative pl-8 md:pl-12 reveal">
+                    <div class="absolute w-6 h-6 bg-gray-600 rounded-full -left-[12.5px] border-4 border-deepblack flex items-center justify-center"></div>
+                    <div class="bg-transparent p-4">
+                        <p class="text-gray-400 italic text-sm"><i class="fas fa-arrow-up mr-2 text-gold"></i> Professional Development & Practical Projects</p>
+                    </div>
+                </div>
+
+                <!-- BCA -->
+                <div class="relative pl-8 md:pl-12 reveal">
+                    <div class="absolute w-6 h-6 bg-gray-600 rounded-full -left-[12.5px] border-4 border-deepblack flex items-center justify-center"></div>
+                    <div class="bg-charcoal p-6 rounded-lg border border-gray-800 hover:border-gray-600 transition-colors">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
+                            <h4 class="text-xl font-bold text-gray-300">Bachelor of Computer Applications (BCA)</h4>
+                            <span class="text-gray-500 font-mono text-sm mt-2 md:mt-0">2021 – 2024</span>
+                        </div>
+                        <p class="text-lg text-gray-400 mb-2">Shreyarth University, Ahmedabad</p>
+                        <p class="text-gray-500 text-sm">Built foundational knowledge in programming, web development, and database management.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Skills -->
+    <section id="skills" class="py-24 bg-charcoal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-sm text-gold font-bold tracking-widest uppercase mb-2">Capabilities</h2>
+                <h3 class="text-3xl md:text-4xl font-serif font-bold text-offwhite">Technical Skills</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Frontend -->
+                <div class="bg-deepblack p-8 rounded-xl border border-gray-800 hover:-translate-y-2 transition-transform duration-300 reveal">
+                    <div class="text-gold text-3xl mb-4"><i class="fas fa-laptop-code"></i></div>
+                    <h4 class="text-xl font-bold text-white mb-6">Frontend</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-center"><i class="fas fa-check text-gold text-xs mr-3"></i> HTML5 & CSS3</li>
+                        <li class="flex items-center"><i class="fas fa-check text-gold text-xs mr-3"></i> JavaScript</li>
+                        <li class="flex items-center"><i class="fas fa-check text-gold text-xs mr-3"></i> React.js</li>
+                        <li class="flex items-center"><i class="fas fa-check text-gold text-xs mr-3"></i> Bootstrap</li>
+                        <li class="flex items-center"><i class="fas fa-check text-gold text-xs mr-3"></i> Tailwind CSS</li>
+                    </ul>
+                </div>
+
+                <!-- Backend -->
+                <div class="bg-deepblack p-8 rounded-xl border border-gray-800 hover:-translate-y-2 transition-transform duration-300 reveal" style="transition-delay: 0.1s;">
+                    <div class="text-gold text-3xl mb-4"><i class="fas fa-server"></i></div>
+                    <h4 class="text-xl font-bold text-white mb-6">Backend</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-center"><i class="fas fa-check text-gold text-xs mr-3"></i> Node.js</li>
+                        <li class="flex items-center"><i class="fas fa-check text-gold text-xs mr-3"></i> Express.js</li>
+                        <li class="flex items-center"><i class="fas fa-check text-gold text-xs mr-3"></i> PHP</li>
+                        <li class="flex items-center"><i class="fas fa-check text-gold text-xs mr-3"></i> Laravel</li>
+                    </ul>
+                </div>
+
+                <!-- Database -->
+                <div class="bg-deepblack p-8 rounded-xl border border-gray-800 hover:-translate-y-2 transition-transform duration-300 reveal" style="transition-delay: 0.2s;">
+                    <div class="text-gold text-3xl mb-4"><i class="fas fa-database"></i></div>
+                    <h4 class="text-xl font-bold text-white mb-6">Database</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-center"><i class="fas fa-check text-gold text-xs mr-3"></i> MongoDB</li>
+                        <li class="flex items-center"><i class="fas fa-check text-gold text-xs mr-3"></i> MySQL</li>
+                    </ul>
+                </div>
+
+                <!-- Programming -->
+                <div class="bg-deepblack p-8 rounded-xl border border-gray-800 hover:-translate-y-2 transition-transform duration-300 reveal">
+                    <div class="text-gold text-3xl mb-4"><i class="fas fa-code"></i></div>
+                    <h4 class="text-xl font-bold text-white mb-6">Programming</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-center"><i class="fas fa-check text-gold text-xs mr-3"></i> JavaScript</li>
+                        <li class="flex items-center"><i class="fas fa-check text-gold text-xs mr-3"></i> Python</li>
+                        <li class="flex items-center"><i class="fas fa-check text-gold text-xs mr-3"></i> PHP</li>
+                    </ul>
+                </div>
+
+                <!-- Dev & Tools -->
+                <div class="bg-deepblack p-8 rounded-xl border border-gray-800 hover:-translate-y-2 transition-transform duration-300 reveal" style="transition-delay: 0.1s;">
+                    <div class="text-gold text-3xl mb-4"><i class="fas fa-tools"></i></div>
+                    <h4 class="text-xl font-bold text-white mb-6">Development & Tools</h4>
+                    <ul class="space-y-3 text-gray-400 grid grid-cols-2 gap-x-2">
+                        <li class="flex items-center"><i class="fas fa-check text-gold text-xs mr-2"></i> REST APIs</li>
+                        <li class="flex items-center"><i class="fas fa-check text-gold text-xs mr-2"></i> Git / GitHub</li>
+                        <li class="flex items-center"><i class="fas fa-check text-gold text-xs mr-2"></i> VS Code</li>
+                        <li class="flex items-center"><i class="fas fa-check text-gold text-xs mr-2"></i> Postman</li>
+                        <li class="flex items-center col-span-2"><i class="fas fa-check text-gold text-xs mr-2"></i> MongoDB Compass</li>
+                    </ul>
+                </div>
+
+                <!-- Data & Analytics -->
+                <div class="bg-deepblack p-8 rounded-xl border border-gray-800 hover:-translate-y-2 transition-transform duration-300 reveal" style="transition-delay: 0.2s;">
+                    <div class="text-gold text-3xl mb-4"><i class="fas fa-chart-pie"></i></div>
+                    <h4 class="text-xl font-bold text-white mb-6">Data & Analytics</h4>
+                    <ul class="space-y-3 text-gray-400 grid grid-cols-2 gap-x-2">
+                        <li class="flex items-center"><i class="fas fa-check text-gold text-xs mr-2"></i> Excel</li>
+                        <li class="flex items-center"><i class="fas fa-check text-gold text-xs mr-2"></i> SQL</li>
+                        <li class="flex items-center col-span-2"><i class="fas fa-check text-gold text-xs mr-2"></i> Data Cleaning</li>
+                        <li class="flex items-center col-span-2"><i class="fas fa-check text-gold text-xs mr-2"></i> Data Visualization</li>
+                        <li class="flex items-center col-span-2"><i class="fas fa-check text-gold text-xs mr-2"></i> KPIs & Metrics</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section id="projects" class="py-24 bg-deepblack">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-sm text-gold font-bold tracking-widest uppercase mb-2">Portfolio</h2>
+                <h3 class="text-3xl md:text-4xl font-serif font-bold text-offwhite">Featured Projects</h3>
+            </div>
+
+            <div class="space-y-20">
+                <!-- Project 1 -->
+                <div class="group flex flex-col lg:flex-row gap-10 items-center reveal">
+                    <div class="w-full lg:w-1/2 aspect-video bg-charcoal rounded-xl border border-gray-800 overflow-hidden relative flex items-center justify-center p-8 group-hover:border-gold/30 transition-colors">
+                        <div class="text-center">
+                            <h3 class="text-3xl font-serif text-white mb-2">PAKIZA BURKHA</h3>
+                            <p class="text-gold tracking-widest text-sm uppercase">E-commerce</p>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-1/2 space-y-6">
+                        <div class="flex items-center gap-3">
+                            <span class="px-3 py-1 bg-charcoal rounded-full text-xs text-gray-300 border border-gray-700">MERN Concept</span>
+                            <span class="px-3 py-1 bg-charcoal rounded-full text-xs text-gray-300 border border-gray-700">Business Website</span>
+                        </div>
+                        <h4 class="text-2xl font-bold text-white">Pakiza Burkha</h4>
+                        <p class="text-gray-400 leading-relaxed">
+                            A modern e-commerce platform designed for a premium modest-fashion business offering abayas, burkhas, hijabs, and prayer dresses.
+                        </p>
+                        <div class="bg-charcoal p-4 rounded-lg border border-gray-800">
+                            <h5 class="text-white text-sm font-bold mb-2">Highlights:</h5>
+                            <p class="text-gray-400 text-sm leading-relaxed">
+                                Product & category management, customer browsing, authentication, order processing, and business inquiry management integrated with a MongoDB database and backend APIs.
+                            </p>
+                        </div>
+                        <p class="text-sm text-gray-500 font-mono">
+                            HTML, CSS, JS, Bootstrap, MongoDB, Node.js/Express
+                        </p>
+                        <div class="flex flex-wrap gap-4 pt-2">
+                            <a href="https://pakiza-ecommerce-p75e.vercel.app/" target="_blank" class="px-5 py-2 bg-gold text-deepblack rounded font-medium hover:bg-yellow-500 transition-colors text-sm"><i class="fas fa-external-link-alt mr-2"></i> Live Website</a>
+                            <a href="#" class="px-5 py-2 bg-charcoal text-white rounded font-medium hover:bg-gray-800 border border-gray-700 transition-colors text-sm"><i class="fab fa-github mr-2"></i> GitHub</a>
+                            <a href="#" class="px-5 py-2 bg-transparent text-gray-300 rounded font-medium hover:text-white transition-colors text-sm">View Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="group flex flex-col lg:flex-row-reverse gap-10 items-center reveal">
+                    <div class="w-full lg:w-1/2 aspect-video bg-charcoal rounded-xl border border-gray-800 overflow-hidden relative flex items-center justify-center p-8 group-hover:border-gold/30 transition-colors">
+                        <div class="text-center">
+                            <h3 class="text-3xl font-serif text-white mb-2">AHNA GOLD</h3>
+                            <p class="text-gold tracking-widest text-sm uppercase">Jewellery Platform</p>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-1/2 space-y-6">
+                        <div class="flex items-center gap-3">
+                            <span class="px-3 py-1 bg-charcoal rounded-full text-xs text-gray-300 border border-gray-700">MERN Stack</span>
+                            <span class="px-3 py-1 bg-charcoal rounded-full text-xs text-gray-300 border border-gray-700">E-commerce</span>
+                        </div>
+                        <h4 class="text-2xl font-bold text-white">Ahna Gold</h4>
+                        <p class="text-gray-400 leading-relaxed">
+                            A modern web application focused on creating a professional online experience for a jewellery and gold business.
+                        </p>
+                        <div class="bg-charcoal p-4 rounded-lg border border-gray-800">
+                            <h5 class="text-white text-sm font-bold mb-2">Highlights:</h5>
+                            <p class="text-gray-400 text-sm leading-relaxed">
+                                Responsive modern UI, clean product presentation, full MERN architecture, robust database integration, and API-based application structure.
+                            </p>
+                        </div>
+                        <p class="text-sm text-gray-500 font-mono">
+                            MongoDB, Express.js, React.js, Node.js
+                        </p>
+                        <div class="flex flex-wrap gap-4 pt-2">
+                            <a href="#" class="px-5 py-2 bg-gold text-deepblack rounded font-medium hover:bg-yellow-500 transition-colors text-sm"><i class="fas fa-desktop mr-2"></i> Live Demo</a>
+                            <a href="#" class="px-5 py-2 bg-charcoal text-white rounded font-medium hover:bg-gray-800 border border-gray-700 transition-colors text-sm"><i class="fab fa-github mr-2"></i> GitHub</a>
+                            <a href="#" class="px-5 py-2 bg-transparent text-gray-300 rounded font-medium hover:text-white transition-colors text-sm">View Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="group flex flex-col lg:flex-row gap-10 items-center reveal">
+                    <div class="w-full lg:w-1/2 aspect-video bg-charcoal rounded-xl border border-gray-800 overflow-hidden relative flex items-center justify-center p-8 group-hover:border-gold/30 transition-colors">
+                        <div class="text-center">
+                            <h3 class="text-3xl font-serif text-white mb-2">THIEST CAFE</h3>
+                            <p class="text-gold tracking-widest text-sm uppercase">Business App</p>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-1/2 space-y-6">
+                        <div class="flex items-center gap-3">
+                            <span class="px-3 py-1 bg-charcoal rounded-full text-xs text-gray-300 border border-gray-700">Android</span>
+                            <span class="px-3 py-1 bg-charcoal rounded-full text-xs text-gray-300 border border-gray-700">Management</span>
+                        </div>
+                        <h4 class="text-2xl font-bold text-white">Thiest Cafe</h4>
+                        <p class="text-gray-400 leading-relaxed">
+                            A cafe management application designed to simplify cafe-related operations and provide a digital solution for managing business activities.
+                        </p>
+                        <div class="bg-charcoal p-4 rounded-lg border border-gray-800">
+                            <h5 class="text-white text-sm font-bold mb-2">Highlights:</h5>
+                            <p class="text-gray-400 text-sm leading-relaxed">
+                                Business workflow integration, streamlined application development, intuitive user interaction, and organized data management.
+                            </p>
+                        </div>
+                        <div class="flex flex-wrap gap-4 pt-2">
+                            <a href="#" class="px-5 py-2 bg-gold text-deepblack rounded font-medium hover:bg-yellow-500 transition-colors text-sm"><i class="fas fa-eye mr-2"></i> View Project</a>
+                            <a href="#" class="px-5 py-2 bg-charcoal text-white rounded font-medium hover:bg-gray-800 border border-gray-700 transition-colors text-sm"><i class="fab fa-github mr-2"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Practical Experience -->
+    <section id="experience" class="py-24 bg-charcoal">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-sm text-gold font-bold tracking-widest uppercase mb-2">Professional Background</h2>
+                <h3 class="text-3xl md:text-4xl font-serif font-bold text-offwhite">Professional Experience</h3>
+            </div>
+
+            <div class="bg-deepblack p-8 md:p-10 rounded-2xl border border-gray-800 shadow-xl reveal">
+                <div class="flex flex-col md:flex-row justify-between md:items-center border-b border-gray-800 pb-6 mb-6">
+                    <div>
+                        <h4 class="text-2xl font-bold text-white mb-2">MERN Stack Developer</h4>
+                        <p class="text-gold">GROOT Technologies</p>
+                    </div>
+                    <div class="mt-4 md:mt-0 px-4 py-2 bg-charcoal rounded text-sm text-gray-300 border border-gray-700">
+                        1.5 Years Experience
+                    </div>
+                </div>
+
+                <p class="text-gray-400 mb-6 leading-relaxed">
+                    Worked as a full-time MERN Stack Developer building and maintaining robust web applications, developing scalable APIs, and crafting intuitive user interfaces to solve real-world business challenges.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3 mb-8">
+                    <div class="flex items-start">
+                        <i class="fas fa-angle-right text-gold mt-1 mr-3 text-sm"></i>
+                        <span class="text-gray-300 text-sm">Developed scalable web applications using MongoDB, Express, React, and Node.js</span>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-angle-right text-gold mt-1 mr-3 text-sm"></i>
+                        <span class="text-gray-300 text-sm">Built and optimized RESTful APIs for seamless data flow</span>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-angle-right text-gold mt-1 mr-3 text-sm"></i>
+                        <span class="text-gray-300 text-sm">Implemented responsive and modern UI designs using React.js</span>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-angle-right text-gold mt-1 mr-3 text-sm"></i>
+                        <span class="text-gray-300 text-sm">Integrated third-party services and managed databases</span>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-angle-right text-gold mt-1 mr-3 text-sm"></i>
+                        <span class="text-gray-300 text-sm">Collaborated on system architecture and logic optimization</span>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-angle-right text-gold mt-1 mr-3 text-sm"></i>
+                        <span class="text-gray-300 text-sm">Debugged code, improved performance, and maintained codebase quality</span>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-r from-charcoal to-gray-900 p-5 rounded-lg border-l-4 border-gold">
+                    <p class="text-gray-300 italic text-sm md:text-base">
+                        "Working at GROOT Technologies significantly honed my ability to architect full-stack solutions, deliver high-quality code, and directly align technical deliverables with business goals."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Data Analytics Journey -->
+    <section id="analytics" class="py-24 bg-deepblack overflow-hidden relative">
+        <div class="absolute right-0 top-0 w-1/3 h-full bg-gradient-to-l from-charcoal/50 to-transparent z-0"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="reveal">
+                    <h2 class="text-sm text-gold font-bold tracking-widest uppercase mb-2">Skill Expansion</h2>
+                    <h3 class="text-3xl md:text-4xl font-serif font-bold text-offwhite mb-6">From Data to Decisions</h3>
+                    
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        Beyond software development, I am actively building knowledge in Data Analytics. Understanding how data moves, how it's stored, and how it translates into business insights makes me a more holistic developer.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-2 mb-8">
+                        <span class="px-3 py-1 bg-charcoal text-gray-300 rounded text-sm border border-gray-800">SQL & Excel</span>
+                        <span class="px-3 py-1 bg-charcoal text-gray-300 rounded text-sm border border-gray-800">Data Visualization</span>
+                        <span class="px-3 py-1 bg-charcoal text-gray-300 rounded text-sm border border-gray-800">ETL / ELT</span>
+                        <span class="px-3 py-1 bg-charcoal text-gray-300 rounded text-sm border border-gray-800">Descriptive & Predictive</span>
+                        <span class="px-3 py-1 bg-charcoal text-gray-300 rounded text-sm border border-gray-800">Star / Snowflake Schema</span>
+                        <span class="px-3 py-1 bg-charcoal text-gray-300 rounded text-sm border border-gray-800">Data Warehousing</span>
+                        <span class="px-3 py-1 bg-charcoal text-gray-300 rounded text-sm border border-gray-800">KPIs & Metrics</span>
+                    </div>
+                </div>
+
+                <div class="relative reveal">
+                    <div class="absolute -top-4 -right-4 bg-gold text-deepblack text-xs font-bold px-3 py-1 rounded z-20 shadow-lg">Demo Analytics</div>
+                    
+                    <div class="bg-charcoal p-6 rounded-xl border border-gray-700 shadow-2xl">
+                        <div class="grid grid-cols-2 gap-4 mb-4">
+                            <!-- Card 1 -->
+                            <div class="bg-deepblack p-4 rounded-lg border border-gray-800">
+                                <p class="text-gray-500 text-xs uppercase mb-1">Total Revenue</p>
+                                <p class="text-2xl font-bold text-white">$45,231</p>
+                                <p class="text-green-500 text-xs mt-1"><i class="fas fa-arrow-up mr-1"></i> 12% vs last month</p>
+                            </div>
+                            <!-- Card 2 -->
+                            <div class="bg-deepblack p-4 rounded-lg border border-gray-800">
+                                <p class="text-gray-500 text-xs uppercase mb-1">Conversion Rate</p>
+                                <p class="text-2xl font-bold text-white">4.8%</p>
+                                <p class="text-green-500 text-xs mt-1"><i class="fas fa-arrow-up mr-1"></i> 0.5% vs last month</p>
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-3 gap-4">
+                            <div class="bg-deepblack p-4 rounded-lg border border-gray-800 text-center">
+                                <p class="text-gray-500 text-xs mb-1">Total Leads</p>
+                                <p class="text-xl font-bold text-white">1,204</p>
+                            </div>
+                            <div class="bg-deepblack p-4 rounded-lg border border-gray-800 text-center">
+                                <p class="text-gray-500 text-xs mb-1">Qualified</p>
+                                <p class="text-xl font-bold text-white">482</p>
+                            </div>
+                            <div class="bg-deepblack p-4 rounded-lg border border-gray-800 text-center">
+                                <p class="text-gray-500 text-xs mb-1">Closed</p>
+                                <p class="text-xl font-bold text-gold">145</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4 bg-deepblack h-24 rounded-lg border border-gray-800 relative overflow-hidden flex items-end p-2 gap-1">
+                            <!-- Fake bar chart -->
+                            <div class="w-1/6 bg-gray-700 rounded-t h-1/3 hover:bg-gold transition-colors"></div>
+                            <div class="w-1/6 bg-gray-700 rounded-t h-1/2 hover:bg-gold transition-colors"></div>
+                            <div class="w-1/6 bg-gray-700 rounded-t h-2/3 hover:bg-gold transition-colors"></div>
+                            <div class="w-1/6 bg-gray-700 rounded-t h-1/4 hover:bg-gold transition-colors"></div>
+                            <div class="w-1/6 bg-gray-700 rounded-t h-3/4 hover:bg-gold transition-colors"></div>
+                            <div class="w-1/6 bg-gold rounded-t h-full"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What I Bring -->
+    <section class="py-24 bg-charcoal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-sm text-gold font-bold tracking-widest uppercase mb-2">Value Proposition</h2>
+                <h3 class="text-3xl md:text-4xl font-serif font-bold text-offwhite">What I Bring to a Team</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- 1 -->
+                <div class="bg-deepblack p-6 rounded-xl border border-gray-800 hover:border-gold/50 transition-colors reveal">
+                    <div class="w-12 h-12 bg-charcoal rounded-full flex items-center justify-center text-gold mb-4 border border-gray-700">
+                        <i class="fas fa-puzzle-piece"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-2">Problem Solving</h4>
+                    <p class="text-gray-400 text-sm">Ability to investigate issues systematically and find practical, code-level solutions.</p>
+                </div>
+                <!-- 2 -->
+                <div class="bg-deepblack p-6 rounded-xl border border-gray-800 hover:border-gold/50 transition-colors reveal" style="transition-delay: 0.1s;">
+                    <div class="w-12 h-12 bg-charcoal rounded-full flex items-center justify-center text-gold mb-4 border border-gray-700">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-2">Full App Understanding</h4>
+                    <p class="text-gray-400 text-sm">Solid grasp of how frontend, backend, database, and APIs interact in a full ecosystem.</p>
+                </div>
+                <!-- 3 -->
+                <div class="bg-deepblack p-6 rounded-xl border border-gray-800 hover:border-gold/50 transition-colors reveal" style="transition-delay: 0.2s;">
+                    <div class="w-12 h-12 bg-charcoal rounded-full flex items-center justify-center text-gold mb-4 border border-gray-700">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-2">Business Context</h4>
+                    <p class="text-gray-400 text-sm">Ability to understand CRM, e-commerce logic, and real-world business processes.</p>
+                </div>
+                <!-- 4 -->
+                <div class="bg-deepblack p-6 rounded-xl border border-gray-800 hover:border-gold/50 transition-colors reveal">
+                    <div class="w-12 h-12 bg-charcoal rounded-full flex items-center justify-center text-gold mb-4 border border-gray-700">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-2">Quality Mindset</h4>
+                    <p class="text-gray-400 text-sm">Strong attention to bugs, data validation, usability, and expected application behavior.</p>
+                </div>
+                <!-- 5 -->
+                <div class="bg-deepblack p-6 rounded-xl border border-gray-800 hover:border-gold/50 transition-colors reveal" style="transition-delay: 0.1s;">
+                    <div class="w-12 h-12 bg-charcoal rounded-full flex items-center justify-center text-gold mb-4 border border-gray-700">
+                        <i class="fas fa-book-reader"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-2">Continuous Learning</h4>
+                    <p class="text-gray-400 text-sm">Actively expanding knowledge in advanced MERN development and modern Data Analytics.</p>
+                </div>
+                <!-- 6 -->
+                <div class="bg-deepblack p-6 rounded-xl border border-gray-800 hover:border-gold/50 transition-colors reveal" style="transition-delay: 0.2s;">
+                    <div class="w-12 h-12 bg-charcoal rounded-full flex items-center justify-center text-gold mb-4 border border-gray-700">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-2">Adaptability</h4>
+                    <p class="text-gray-400 text-sm">Highly comfortable learning new technologies, tools, testing methodologies, and business domains.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements / Learning / Why Work With Me -->
+    <section class="py-24 bg-deepblack">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                
+                <!-- Journey Highlights -->
+                <div class="reveal">
+                    <h3 class="text-2xl font-serif font-bold text-white mb-8 border-b border-gray-800 pb-4">Journey Highlights</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-star text-gold mt-1 mr-4"></i>
+                            <span class="text-gray-300">Successfully completed BCA and currently pursuing MCA</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-star text-gold mt-1 mr-4"></i>
+                            <span class="text-gray-300">Built multiple functional software projects</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-star text-gold mt-1 mr-4"></i>
+                            <span class="text-gray-300">Developed full e-commerce & business platforms</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-star text-gold mt-1 mr-4"></i>
+                            <span class="text-gray-300">1.5 years of professional experience as a MERN Stack Developer</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-star text-gold mt-1 mr-4"></i>
+                            <span class="text-gray-300">Proven track record of building and maintaining scalable web applications</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-star text-gold mt-1 mr-4"></i>
+                            <span class="text-gray-300">Building strong foundations in Data Analytics</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Currently Learning -->
+                <div class="reveal">
+                    <h3 class="text-2xl font-serif font-bold text-white mb-8 border-b border-gray-800 pb-4">Currently Learning</h3>
+                    <div class="flex flex-col gap-4">
+                        <div class="bg-charcoal px-5 py-3 rounded-lg border border-gray-800 flex items-center justify-between group hover:border-gold/30 transition-colors">
+                            <span class="text-gray-300 font-medium group-hover:text-white transition-colors">Advanced React.js & Node.js</span>
+                            <i class="fas fa-spinner fa-spin text-gold/50"></i>
+                        </div>
+                        <div class="bg-charcoal px-5 py-3 rounded-lg border border-gray-800 flex items-center justify-between group hover:border-gold/30 transition-colors">
+                            <span class="text-gray-300 font-medium group-hover:text-white transition-colors">Data Analytics & Visualization</span>
+                            <i class="fas fa-spinner fa-spin text-gold/50"></i>
+                        </div>
+                        <div class="bg-charcoal px-5 py-3 rounded-lg border border-gray-800 flex items-center justify-between group hover:border-gold/30 transition-colors">
+                            <span class="text-gray-300 font-medium group-hover:text-white transition-colors">SQL & Advanced Excel</span>
+                            <i class="fas fa-spinner fa-spin text-gold/50"></i>
+                        </div>
+                        <div class="bg-charcoal px-5 py-3 rounded-lg border border-gray-800 flex items-center justify-between group hover:border-gold/30 transition-colors">
+                            <span class="text-gray-300 font-medium group-hover:text-white transition-colors">Software Testing & QA Concepts</span>
+                            <i class="fas fa-spinner fa-spin text-gold/50"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Why Work With Me -->
+            <div class="mt-20 bg-gradient-to-br from-charcoal to-deepblack p-10 rounded-2xl border border-gray-800 text-center reveal">
+                <h3 class="text-2xl md:text-3xl font-serif font-bold text-white mb-6">Why Work With Me?</h3>
+                <p class="max-w-3xl mx-auto text-gray-400 text-lg leading-relaxed mb-8">
+                    "I combine development knowledge with a practical understanding of business applications. I enjoy building interfaces, working with databases and APIs, investigating application issues, and understanding how technology can solve real business problems."
+                </p>
+                <div class="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12 text-white font-medium">
+                    <span class="flex items-center"><i class="fas fa-check text-gold mr-2"></i> Technical curiosity</span>
+                    <span class="flex items-center"><i class="fas fa-check text-gold mr-2"></i> Business-oriented thinking</span>
+                    <span class="flex items-center"><i class="fas fa-check text-gold mr-2"></i> Strong willingness to learn</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-charcoal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-sm text-gold font-bold tracking-widest uppercase mb-2">Get In Touch</h2>
+                <h3 class="text-3xl md:text-4xl font-serif font-bold text-offwhite">Let's Build Something Meaningful</h3>
+                <p class="max-w-2xl mx-auto mt-4 text-gray-400">
+                    Whether you're looking for a developer, a technology enthusiast, or someone who can understand both technical and business requirements, I'd be happy to connect.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                <!-- Info -->
+                <div class="lg:col-span-1 space-y-8 reveal">
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-deepblack rounded flex items-center justify-center text-gold text-xl border border-gray-800 mr-4">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold mb-1">Email</h4>
+                            <p class="text-gray-400 text-sm">hello@example.com</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-deepblack rounded flex items-center justify-center text-gold text-xl border border-gray-800 mr-4">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold mb-1">Phone</h4>
+                            <p class="text-gray-400 text-sm">+91 XXXXX XXXXX</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-deepblack rounded flex items-center justify-center text-gold text-xl border border-gray-800 mr-4">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold mb-1">Location</h4>
+                            <p class="text-gray-400 text-sm">Ahmedabad, Gujarat, India</p>
+                        </div>
+                    </div>
+
+                    <div class="pt-6 border-t border-gray-800 flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-deepblack rounded flex items-center justify-center text-gray-400 hover:text-gold hover:border-gold border border-gray-800 transition-all"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="w-10 h-10 bg-deepblack rounded flex items-center justify-center text-gray-400 hover:text-white hover:border-white border border-gray-800 transition-all"><i class="fab fa-github"></i></a>
+                    </div>
+                    
+                    <a href="#" class="inline-flex items-center justify-center w-full px-6 py-3 mt-4 bg-deepblack border border-gray-700 text-white rounded hover:border-gold hover:text-gold transition-all group">
+                        <i class="fas fa-file-pdf mr-2 text-gray-400 group-hover:text-gold"></i> Download Resume
+                    </a>
+                </div>
+
+                <!-- Form -->
+                <div class="lg:col-span-2 reveal">
+                    <form class="bg-deepblack p-8 rounded-xl border border-gray-800 space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs text-gray-500 uppercase tracking-wider mb-2">Name</label>
+                                <input type="text" class="w-full bg-charcoal border border-gray-700 rounded px-4 py-3 text-white focus:outline-none focus:border-gold transition-colors" placeholder="John Doe">
+                            </div>
+                            <div>
+                                <label class="block text-xs text-gray-500 uppercase tracking-wider mb-2">Email</label>
+                                <input type="email" class="w-full bg-charcoal border border-gray-700 rounded px-4 py-3 text-white focus:outline-none focus:border-gold transition-colors" placeholder="john@example.com">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs text-gray-500 uppercase tracking-wider mb-2">Subject</label>
+                            <input type="text" class="w-full bg-charcoal border border-gray-700 rounded px-4 py-3 text-white focus:outline-none focus:border-gold transition-colors" placeholder="Job Opportunity / Freelance / Inquiry">
+                        </div>
+                        <div>
+                            <label class="block text-xs text-gray-500 uppercase tracking-wider mb-2">Message</label>
+                            <textarea rows="4" class="w-full bg-charcoal border border-gray-700 rounded px-4 py-3 text-white focus:outline-none focus:border-gold transition-colors resize-none" placeholder="How can we work together?"></textarea>
+                        </div>
+                        <button type="button" class="w-full bg-gold text-deepblack font-bold rounded px-6 py-3 hover:bg-yellow-500 transition-colors shadow-lg">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-deepblack border-t border-gray-900 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-gray-500 text-sm">
+                &copy; <span id="year"></span> Abubakar Mansuri. All rights reserved.
+            </p>
+            <p class="text-gray-600 text-xs">
+                Built with passion and focus on continuous learning.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
